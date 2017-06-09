@@ -1,0 +1,26 @@
+version: "2"
+
+services:
+  db:
+     image: mariadb
+     restart: always
+     environment:
+         MYSQL_ROOT_PASSWORD: rootpass
+         MYSQL_DATABASE: etherpad
+         MYSQL_USER: wordpress
+         MYSQL_PASSWORD: wordpress123
+
+  etherpad:
+     depends_on:
+          - db
+     image: tvelocity/etherpad-lite
+     links:
+          - db
+     restart: always
+     environment:
+         ETHERPAD_DB_HOST: db
+         ETHERPAD_DB_USER: root
+         ETHERPAD_DB_PASSWORD: rootpass
+         ETHERPAD_ADMIN_PASSWORD: admin
+     ports:
+          - 9001:9001
