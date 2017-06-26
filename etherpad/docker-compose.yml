@@ -9,7 +9,8 @@ services:
          MYSQL_DATABASE: etherpad
          MYSQL_USER: wordpress
          MYSQL_PASSWORD: wordpress123
-
+     volumes:
+          - ~/.data:/var/lib/mysql
   etherpad:
      depends_on:
           - db
