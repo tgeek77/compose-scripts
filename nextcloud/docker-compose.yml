@@ -1,4 +1,4 @@
-version: "2"i
+version: "2"
 
 volumes:
   nc:
