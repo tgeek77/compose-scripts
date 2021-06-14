@@ -28,7 +28,7 @@ services:
      volumes:
           - /data:/var/www/html
 
-  collabora
+  collabora:
      image: collabora/code
      restart: always
      environment:
