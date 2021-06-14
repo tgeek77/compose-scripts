@@ -27,3 +27,11 @@ services:
           - 8080:80
      volumes:
           - /data:/var/www/html
+
+  collabora
+     image: collabora/code
+     restart: always
+     environment:
+         extra_params: --o:ssl.enable=false
+     ports:
+          - 9980:9980
