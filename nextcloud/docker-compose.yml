@@ -33,5 +33,3 @@ services:
      restart: always
      environment:
          extra_params: --o:ssl.enable=false
-     ports:
-          - 9980:9980
