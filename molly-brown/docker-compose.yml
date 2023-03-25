@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  gemini:
+     build: gemini_build/
+     restart: always
+     volumes:
+          - "./gemini/:/srv/gemini/"
+     ports:
+          - 1965:1965
