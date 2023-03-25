@@ -14,7 +14,7 @@ services:
          MYSQL_USER: wordpress
          MYSQL_PASSWORD: wordpress123
      volumes:
-          - ~/.db:/var/lib/mysql
+          - .db:/var/lib/mysql
 
   nc:
      depends_on:
@@ -26,7 +26,7 @@ services:
      ports:
           - 8080:80
      volumes:
-          - /data:/var/www/html
+          - .data:/var/www/html
 
   collabora:
      image: collabora/code
